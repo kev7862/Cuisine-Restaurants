@@ -23,7 +23,9 @@ public class MainActivity extends AppCompatActivity {
         TextView textView = (TextView)findViewById(R.id.textView);
 
         Typeface customFont = Typeface.createFromAsset(getAssets(), "fonts/cartel.ttf");
+        Typeface custom = Typeface.createFromAsset(getAssets(), "fonts/Pacifico.ttf");
         textView.setTypeface(customFont);
+        mFindRestaurants.setTypeface(custom);
 
        mFindRestaurants.setOnClickListener(new View.OnClickListener() {
            @Override
