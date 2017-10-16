@@ -1,5 +1,6 @@
 package kev7862.github.cuisinerestaurants;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -31,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
            @Override
            public void onClick(View view) {
                // Click Button code here.
-               Toast.makeText(getApplicationContext(), "Button Clicked", Toast.LENGTH_LONG).show();
+               Intent intent = new Intent(MainActivity.this, RestaurantsActivity.class);
+               startActivity(intent);
            }
        });
 
