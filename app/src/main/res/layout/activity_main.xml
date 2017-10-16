@@ -11,12 +11,12 @@
         android:layout_height="match_parent"
         android:id="@+id/imageView"
         android:src="@drawable/cuisine"
-        android:scaleType="centerCrop" />
+        android:scaleType="fitCenter" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MyRestaurants"
+        android:text="@string/header"
         android:layout_marginTop="35dp"
         android:id="@+id/textView"
         android:textColor="@color/colorTextIcons"
@@ -28,11 +28,12 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Find Restaurants"
+        android:text="@string/restaurantButton"
         android:id="@+id/findRestaurantsButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@color/colorAccent"
+        android:textSize="20sp"
+        android:background="#000000"
         android:textColor="@color/colorTextIcons" />
 
 
