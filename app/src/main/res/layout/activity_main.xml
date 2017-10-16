@@ -11,13 +11,14 @@
         android:layout_height="match_parent"
         android:id="@+id/imageView"
         android:src="@drawable/cuisine"
-        android:scaleType="fitCenter" />
+        android:scaleType="fitCenter"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/header"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="50dp"
         android:id="@+id/textView"
         android:textColor="@color/colorTextIcons"
         android:textSize="40sp"
@@ -34,7 +35,7 @@
         android:layout_centerHorizontal="true"
         android:textSize="20sp"
         android:background="#000000"
-        android:textColor="@color/colorTextIcons" />
+        android:textColor="@color/colorTextIcons"/>
 
 
 
