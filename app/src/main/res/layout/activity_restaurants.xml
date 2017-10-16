@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context="kev7862.github.cuisinerestaurants.RestaurantsActivity">
 
-
+    <TextView
+        android:id="@+id/restaurantsText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Here are all my restaurants near"
+        android:layout_centerInParent="true"
+        android:textAlignment="center"/>
 
 </RelativeLayout>
