@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Cuisine Restaurants</string>
     <string name="imageView">Cuisine Restaurants</string>
-    <string name="header">Cuisine Restaurants</string>
+    <!--<string name="header">Cuisine Restaurants</string>-->
     <string name="edit1">Enter Zip Code</string>
     <string name="restaurantButton">Find Restaurants</string>
+    <string name="edit2">Cuisine Restaurants</string>
 </resources>

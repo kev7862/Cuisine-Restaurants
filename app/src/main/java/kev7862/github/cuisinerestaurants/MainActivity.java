@@ -27,12 +27,12 @@ public class MainActivity extends AppCompatActivity {
         // finding view by its id.
         final EditText mLocation = (EditText)findViewById(R.id.locationEditText);
         Button mFindRestaurants = (Button)findViewById(R.id.findRestaurantsButton);
-        TextView textView = (TextView)findViewById(R.id.textView);
+//       TextView textView = (TextView)findViewById(R.id.textView);
 
 // Custom Fonts code
         Typeface customFont = Typeface.createFromAsset(getAssets(), "fonts/cartel.ttf");
         Typeface custom = Typeface.createFromAsset(getAssets(), "fonts/Pacifico.ttf");
-        textView.setTypeface(customFont);
+//        textView.setTypeface(customFont);
         mFindRestaurants.setTypeface(custom);
 
        mFindRestaurants.setOnClickListener(new View.OnClickListener() {
