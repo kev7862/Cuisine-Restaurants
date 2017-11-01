@@ -12,6 +12,13 @@
         android:layout_height="wrap_content"
         android:text="Here are all my restaurants near"
         android:layout_centerInParent="true"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        tools:ignore="HardcodedText" />
+
+    <ListView
+        android:id="@+id/restaurant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
 
 </RelativeLayout>
