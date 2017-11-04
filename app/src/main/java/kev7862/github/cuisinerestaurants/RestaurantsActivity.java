@@ -10,10 +10,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class RestaurantsActivity extends AppCompatActivity {
 
-    TextView mLocationView;
-    ListView mListView;
+    @Bind(R.id.restaurantsText) TextView mLocationView;
+    @Bind(R.id.restaurant) ListView mListView;
+
     private String[] restaurants = new String[] {"Movical", "Tribeka", "Mojos", "Rafikiz", "Reminisce", "Psys", "Totillaz", "Ramadhan", "Hilton", "Serena", "White Sands", "Sarova", "Life of Pie", "Screen Door", "Luc Lac", "Sweet Basil",
             "Slappy Cakes", "Equinox", "Miss Delta's", "Andina",
             "Lardo", "Portland City Grill", "Fat Head's Brewery",
@@ -23,14 +27,13 @@ public class RestaurantsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurants);
-        // locating my textView by its specific id
-        TextView mLocationView = (TextView)findViewById(R.id.restaurantsText);
-        ListView mListview = (ListView)findViewById(R.id.restaurant);
+        // Using ButterKnife to locate our Views by their specific ids
+        ButterKnife.bind(this);
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, restaurants);
-        mListview.setAdapter(adapter);
+        mListView.setAdapter(adapter);
 
-        mListview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 

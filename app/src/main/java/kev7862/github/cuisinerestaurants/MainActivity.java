@@ -12,39 +12,35 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
 
-    private Button mFindRestaurants;
-    private EditText mLocation;
-    TextView textView;
-
-
+    @Bind(R.id.findRestaurantsButton) Button mFindRestaurants;
+    @Bind(R.id.locationEditText) EditText mLocation;
+    @Bind(R.id.textView) TextView mTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // finding view by its id.
-        final EditText mLocation = (EditText)findViewById(R.id.locationEditText);
-        Button mFindRestaurants = (Button)findViewById(R.id.findRestaurantsButton);
-       TextView textView = (TextView)findViewById(R.id.textView);
+// Using ButtterKnife to locate our view by there specific ids
+        ButterKnife.bind(this);
 
 // Custom Fonts code
-        Typeface customFont = Typeface.createFromAsset(getAssets(), "fonts/cartel.ttf");
-        Typeface custom = Typeface.createFromAsset(getAssets(), "fonts/Pacifico.ttf");
-        textView.setTypeface(customFont);
-        mFindRestaurants.setTypeface(custom);
+Typeface custom = Typeface.createFromAsset(getAssets(), "fonts/cartel.ttf");
+        mTextView.setTypeface(custom);
 
-       mFindRestaurants.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               // Click Button code here.
-               String location = mLocation.getText().toString();
-               Intent intent = new Intent(MainActivity.this, RestaurantsActivity.class);
-               intent.putExtra("location", location);
-               startActivity(intent);
-           }
-       });
+mFindRestaurants.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        String location = mLocation.getText().toString();
+        Intent intent = new Intent(MainActivity.this, RestaurantsActivity.class);
+        intent.putExtra("location", location);
+        startActivity(intent);
+    }
+});
 
     }
 }
